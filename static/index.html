@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bundesliga & 2. Bundesliga — Canlı Skor ve Maç Detayları</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot"></span> Bundesliga Merkezi</div>
+  <nav id="tabs">
+    <button data-tab="live" class="active">Canlı</button>
+    <button data-tab="today">Bugün</button>
+    <button data-tab="upcoming">Yaklaşan</button>
+    <button data-tab="finished">Bitmiş</button>
+    <button data-tab="standings">Puan Durumu</button>
+  </nav>
+  <div class="right">
+    <select id="league">
+      <option value="bundesliga">Bundesliga</option>
+      <option value="bundesliga2">2. Bundesliga</option>
+    </select>
+    <label class="auto"><input type="checkbox" id="auto" checked /> Otomatik yenile</label>
+    <button id="refresh" class="ghost">Yenile</button>
+  </div>
+</header>
+
+<main>
+  <section id="list" class="list"><div class="empty">Yükleniyor…</div></section>
+  <section id="detail" class="detail"><div class="empty">Detay için bir maç seçin.</div></section>
+</main>
+
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
