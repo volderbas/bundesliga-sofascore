@@ -99,7 +99,8 @@ def run():
     import uvicorn
 
     port = int(os.getenv("PORT", "8777"))
-    uvicorn.run(app, host="127.0.0.1", port=port)
+    host = os.getenv("HOST", "0.0.0.0")
+    uvicorn.run(app, host=host, port=port)
 
 
 if __name__ == "__main__":
